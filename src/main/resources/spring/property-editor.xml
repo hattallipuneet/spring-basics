@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="propertyEditorRegistrars">
+            <list>
+                <bean class="spring.propertyeditors.CustomPropertyEditorRegistrar"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="customEditors">
+            <map>
+                <entry key="spring.propertyeditors.ExoticType"
+                       value="spring.propertyeditors.ExoticTypeEditor"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="idealStudent" class="spring.propertyeditors.StudentBean">
+        <property name="firstName" value="Alex"/>
+        <property name="lastName" value="Morgan"/>
+        <property name="dob" value="1991-05-18"/>
+    </bean>
+
+    <bean id="ebonyExotic" class="spring.propertyeditors.DependsOnExoticType">
+        <property name="exoticType" value="Ebony"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="autowiredBeanByName" class="spring.beans.autowire.AutowiredBean" autowire="byName"/>
+
+    <bean id="autowireBeanByType" class="spring.beans.autowire.AutowiredBean" autowire="byType"/>
+
+    <bean id="autowireBeanByConstructor" class="spring.beans.autowire.AutowiredBean" autowire="constructor"/>
+
+    <bean id="dependencyBean" class="spring.beans.autowire.DependencyBean">
+        <property name="name" ref="name"/>
+    </bean>
+
+    <bean id="name" class="java.lang.String">
+        <constructor-arg value="String value for DependencyBean"/>
+    </bean>
+
+</beans>

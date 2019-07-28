@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="propertiesHolder" class="spring.beans.collections.PropertiesCollectionHolder">
+        <property name="properties">
+            <props>
+                <prop key="port">8080</prop>
+                <prop key="url">/spring-collection</prop>
+                <prop key="username">admin</prop>
+                <prop key="password">admin</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="devPropertiesHolder" class="spring.beans.collections.PropertiesCollectionHolder" parent="propertiesHolder">
+        <property name="properties">
+            <props merge="true">
+                <prop key="protocol">HTTP</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="listCollectionHolder" class="spring.beans.collections.ListCollectionHolder">
+        <property name="stringListvalues">
+            <list>
+                <value>One</value>
+                <value>Two</value>
+                <value>Three</value>
+                <value>Four</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="setCollectionHolder" class="spring.beans.collections.SetCollectionHolder">
+        <property name="setCollection">
+            <set>
+                <value>One</value>
+                <value>Two</value>
+                <value>Three</value>
+                <value>One</value>
+            </set>
+        </property>
+    </bean>
+
+    <bean id="mapCollectionHolder" class="spring.beans.collections.MapCollectionHolder">
+        <property name="mapCollection">
+            <map>
+                <entry key="k1" value="v1"/>
+                <entry key="k2" value="v2"/>
+                <entry key="k3" value="v3"/>
+                <entry key="k4" value="v4"/>
+            </map>
+        </property>
+    </bean>
+
+</beans>

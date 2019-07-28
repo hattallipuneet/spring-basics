@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="defaultSpringBootAttr" abstract="true">
+        <property name="debug" value="true" />
+        <property name="trace" value="true" />
+        <property name="applicationName" value="Application Name" />
+        <property name="applicationAdminEnabled" value="false" />
+    </bean>
+
+    <bean id="springBootAttr" class="spring.beans.beaninheritance.SpringBootAttr" parent="defaultSpringBootAttr">
+        <property name="loggingFile" value="/path/to/file/location" />
+    </bean>
+
+    <bean id="environmentAttr" class="spring.beans.beaninheritance.EnvironmentAttr">
+        <property name="url" value="example.com"/>
+        <property name="port" value="8082" />
+    </bean>
+
+    <bean id="devEnvironmentAttr" class="spring.beans.beaninheritance.DevEnvironmentAttr" parent="environmentAttr">
+        <property name="appMode" value="DEV" />
+        <property name="protocol" value="https" />
+        <property name="username" value="DEV_USER" />
+        <property name="password" value="AEdsQGcvF4" />
+    </bean>
+
+    <bean id="prodEnvironment" class="spring.beans.beaninheritance.ProdEnvironmentAttr" parent="environmentAttr">
+        <property name="appMode" value="PROD" />
+        <property name="protocol" value="https" />
+        <property name="username" value="PROD_USER" />
+        <property name="password" value="AEdsQGcvF4" />
+    </bean>
+</beans>

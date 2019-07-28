@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="commandManager" class="spring.beans.methodinjection.SpringAwareCommandManager"/>
+
+    <bean id="simpleCommand" class="spring.beans.methodinjection.Command" scope="prototype">
+        <property name="command" value="sh testcommand.sh"/>
+    </bean>
+
+    <bean id="miCommandManager" class="spring.beans.methodinjection.MethodInjectedCommandManager">
+        <lookup-method name="createCommand" bean="simpleCommand" />
+    </bean>
+
+</beans>
