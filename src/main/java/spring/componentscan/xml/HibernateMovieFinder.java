@@ -1,4 +1,8 @@
 package spring.componentscan.xml;
 
-public class HibernateMovieFinder {
+import org.springframework.stereotype.Repository;
+
+@Repository("hibernateMovieFinder")
+public class HibernateMovieFinder implements MovieFinder {
+
 }
