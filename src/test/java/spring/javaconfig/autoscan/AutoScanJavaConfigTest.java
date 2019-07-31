@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration( classes = {spring.javaconfig.autoscan.AutoScanAppConfig.class})
-public class AutoScanJavConfigTest {
+public class AutoScanJavaConfigTest {
 
     @Autowired
     private ApplicationContext applicationContext;
