@@ -4,7 +4,7 @@
  * The {@link spring.javaconfig.internalworking.InfraConfig} class definition is annotated with
  * @Configuration annotation.
  *
- * It defines bean definitions 
+ * It defines bean definitions
  *
  * */
 package spring.javaconfig.internalworking;
