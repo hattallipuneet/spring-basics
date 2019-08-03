@@ -15,4 +15,4 @@
  *
  * */
 
-package spring.javaconfig;
+package spring.javaconfig.intro;

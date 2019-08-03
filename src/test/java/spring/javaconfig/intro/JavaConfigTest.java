@@ -1,4 +1,4 @@
-package spring.javaconfig;
+package spring.javaconfig.intro;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration( classes = {spring.javaconfig.AppConfig.class})
+@ContextConfiguration( classes = {AppConfig.class})
 public class JavaConfigTest {
 
     @Autowired

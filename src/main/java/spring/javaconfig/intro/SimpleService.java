@@ -1,4 +1,4 @@
-package spring.javaconfig;
+package spring.javaconfig.intro;
 
 public interface SimpleService {
 }

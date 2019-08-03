@@ -1,4 +1,4 @@
-package spring.javaconfig.autoscan.basic;
+package spring.javaconfig.autoscan.intro;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package spring.javaconfig;
+package spring.javaconfig.intro;
 
 public class SimpleServiceImpl implements SimpleService {
 }

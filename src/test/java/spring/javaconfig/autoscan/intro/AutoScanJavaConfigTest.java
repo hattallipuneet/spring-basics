@@ -1,4 +1,4 @@
-package spring.javaconfig.autoscan.basic;
+package spring.javaconfig.autoscan.intro;
 
 import org.junit.Assert;
 import org.junit.Test;
