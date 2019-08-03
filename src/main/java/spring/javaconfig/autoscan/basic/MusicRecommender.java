@@ -1,4 +1,4 @@
-package spring.javaconfig.autoscan;
+package spring.javaconfig.autoscan.basic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

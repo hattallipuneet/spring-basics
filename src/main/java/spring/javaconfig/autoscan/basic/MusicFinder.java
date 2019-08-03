@@ -1,4 +1,4 @@
-package spring.javaconfig.autoscan;
+package spring.javaconfig.autoscan.basic;
 
 import org.springframework.stereotype.Service;
 

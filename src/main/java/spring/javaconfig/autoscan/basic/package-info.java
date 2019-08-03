@@ -7,4 +7,4 @@
  *
  * */
 
-package spring.javaconfig.autoscan;
+package spring.javaconfig.autoscan.basic;

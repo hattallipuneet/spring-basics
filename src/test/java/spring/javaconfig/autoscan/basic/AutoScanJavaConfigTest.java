@@ -1,4 +1,4 @@
-package spring.javaconfig.autoscan;
+package spring.javaconfig.autoscan.basic;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -9,7 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration( classes = {spring.javaconfig.autoscan.AutoScanAppConfig.class})
+@ContextConfiguration( classes = {AutoScanAppConfig.class})
 public class AutoScanJavaConfigTest {
 
     @Autowired
