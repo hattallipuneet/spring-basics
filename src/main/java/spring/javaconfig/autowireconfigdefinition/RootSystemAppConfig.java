@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 
 @Configuration
-public class SystemAppConfig {
+public class RootSystemAppConfig {
 
     @Autowired
     private RestInfraConfig restInfraConfig;

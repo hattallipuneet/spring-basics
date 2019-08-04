@@ -17,6 +17,10 @@ repositories {
     jcenter()
 }
 
+test {
+    useJUnit()
+}
+
 dependencies {
 
     // Use JUnit test framework

@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {SystemAppConfig.class, RestInfraConfig.class})
+@ContextConfiguration(classes = {RootSystemAppConfig.class, RestInfraConfig.class})
 public class AutowireConfigBeanTest {
 
     @Autowired

@@ -6,7 +6,7 @@
  *
  *      @Configuration
  *      @Import({ DaoConfig.class, ServiceConfig.class})
- *      public class AppConfig {
+ *      public class AppResourceConfig {
  *
  *      }
  *

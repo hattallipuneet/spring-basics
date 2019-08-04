@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ImportResource;
 
 @Configuration
 @ImportResource(locations = { "classpath:spring/importresourceconfig.xml" })
-public class AppConfig {
+public class AppResourceConfig {
 
     @Value("${url}")
     private String url;
