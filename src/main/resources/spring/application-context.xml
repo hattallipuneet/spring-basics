@@ -14,28 +14,28 @@
 
 	<!-- Following bean definition demonstrates the CI where it has reference and scalar type dependencies -->
 
-	<bean id="complexBean0" class="spring.basics.beans.ComplexBean">
+	<bean id="complexBean0" class="spring.xmlannotationconfig.basics.beans.ComplexBean">
 		<constructor-arg ref="scalarValueBean0"/>
 		<constructor-arg type="boolean" value="true"/>
 	</bean>
 
 	<!-- Following bean definition demonstrates the CI where multiple params have same type-->
 
-	<bean id="complexBean1" class="spring.basics.beans.ComplexBean2">
+	<bean id="complexBean1" class="spring.xmlannotationconfig.basics.beans.ComplexBean2">
 		<constructor-arg name="bean1" ref="scalarValueBean0"/>
 		<constructor-arg name="bean2" ref="scalarValueBean1"/>
 	</bean>
 
 	<!-- Following bean definition demonstrates the SI  -->
 
-	<bean id="scalarValueBean0" class="spring.basics.beans.ScalarValueBean">
+	<bean id="scalarValueBean0" class="spring.xmlannotationconfig.basics.beans.ScalarValueBean">
 		<property name="anInt" value="123"/>
 		<property name="aBoolean" value="true"/>
 		<property name="aFloat" value="3.14f"/>
 		<property name="aDouble" value="180.6"/>
 	</bean>
 
-	<bean id="scalarValueBean1" class="spring.basics.beans.ScalarValueBean">
+	<bean id="scalarValueBean1" class="spring.xmlannotationconfig.basics.beans.ScalarValueBean">
 		<property name="anInt" value="345"/>
 		<property name="aBoolean" value="false"/>
 		<property name="aFloat" value="5.64f"/>
@@ -47,7 +47,7 @@
 		c:{param-name}-ref - For reference type
 		c:{param-name} - For primitive type
 	 -->
-	<bean id="complexBean2" class="spring.basics.beans.ComplexBean"
+	<bean id="complexBean2" class="spring.xmlannotationconfig.basics.beans.ComplexBean"
 		  c:scalarValueBean-ref="scalarValueBean0"
 	      c:complexBean="true"/>
 
@@ -58,7 +58,7 @@
 		c:_{index} - For primitive type
 	-->
 
-	<bean id="complexBean3" class="spring.basics.beans.ComplexBean"
+	<bean id="complexBean3" class="spring.xmlannotationconfig.basics.beans.ComplexBean"
 			c:_0-ref="scalarValueBean0"
 			c:_1="false"/>
 
@@ -68,21 +68,21 @@
 		p:{param}-ref - For reference type
 		p:{param} - For primitive type
 	-->
-	<bean id="scalarValueBean2" class="spring.basics.beans.ScalarValueBean"
+	<bean id="scalarValueBean2" class="spring.xmlannotationconfig.basics.beans.ScalarValueBean"
 		p:anInt="345" p:aFloat="4.56f"
 		p:aBoolean="false" p:aDouble="7.89"/>
 
 	<!--
 		Following bean definition is used to demonstrate the use of static factory method to create bean.
 	-->
-	<bean id="staticFactoryBean" class="spring.basics.beans.ComplexBeanFactory" factory-method="getComplexBean"
-		c:valueBean-ref="scalarValueBean2" c:isComplex="true"/>
+	<bean id="staticFactoryBean" class="spring.xmlannotationconfig.basics.beans.ComplexBeanFactory" factory-method="getComplexBean"
+		  c:valueBean-ref="scalarValueBean2" c:isComplex="true"/>
 
 	<!--
 	 	Following bean definition is used to demonstrate the use of instance (non-static) method to create bean
 	 -->
 
-	<bean id="complexFactoryBean" class="spring.basics.beans.ComplexBeanFactory"/>
+	<bean id="complexFactoryBean" class="spring.xmlannotationconfig.basics.beans.ComplexBeanFactory"/>
 	<bean id="instanceFactoryBean" factory-bean="complexFactoryBean" factory-method="getBean"
 		  c:valueBean-ref="scalarValueBean2" c:isComplex="true"/>
 

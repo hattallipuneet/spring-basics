@@ -6,7 +6,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="propertiesHolder" class="spring.beans.collections.PropertiesCollectionHolder">
+    <bean id="propertiesHolder" class="spring.xmlannotationconfig.beans.collections.PropertiesCollectionHolder">
         <property name="properties">
             <props>
                 <prop key="port">8080</prop>
@@ -17,7 +17,7 @@
         </property>
     </bean>
 
-    <bean id="devPropertiesHolder" class="spring.beans.collections.PropertiesCollectionHolder" parent="propertiesHolder">
+    <bean id="devPropertiesHolder" class="spring.xmlannotationconfig.beans.collections.PropertiesCollectionHolder" parent="propertiesHolder">
         <property name="properties">
             <props merge="true">
                 <prop key="protocol">HTTP</prop>
@@ -25,7 +25,7 @@
         </property>
     </bean>
 
-    <bean id="listCollectionHolder" class="spring.beans.collections.ListCollectionHolder">
+    <bean id="listCollectionHolder" class="spring.xmlannotationconfig.beans.collections.ListCollectionHolder">
         <property name="stringListvalues">
             <list>
                 <value>One</value>
@@ -36,7 +36,7 @@
         </property>
     </bean>
 
-    <bean id="setCollectionHolder" class="spring.beans.collections.SetCollectionHolder">
+    <bean id="setCollectionHolder" class="spring.xmlannotationconfig.beans.collections.SetCollectionHolder">
         <property name="setCollection">
             <set>
                 <value>One</value>
@@ -47,7 +47,7 @@
         </property>
     </bean>
 
-    <bean id="mapCollectionHolder" class="spring.beans.collections.MapCollectionHolder">
+    <bean id="mapCollectionHolder" class="spring.xmlannotationconfig.beans.collections.MapCollectionHolder">
         <property name="mapCollection">
             <map>
                 <entry key="k1" value="v1"/>

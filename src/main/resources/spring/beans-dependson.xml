@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="dependent" class="spring.beans.dependson.Dependent" depends-on="dependency"/>
+    <bean id="dependent" class="spring.xmlannotationconfig.beans.dependson.Dependent" depends-on="dependency"/>
 
-    <bean id="dependency" class="spring.beans.dependson.Dependency"/>
+    <bean id="dependency" class="spring.xmlannotationconfig.beans.dependson.Dependency"/>
 
 </beans>

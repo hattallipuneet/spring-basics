@@ -8,9 +8,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import spring.basics.beans.ComplexBean;
-import spring.propertyeditors.DependsOnExoticType;
-import spring.propertyeditors.StudentBean;
+import spring.xmlannotationconfig.propertyeditors.DependsOnExoticType;
+import spring.xmlannotationconfig.propertyeditors.StudentBean;
 
 @ContextConfiguration(locations = {"classpath:spring/property-editor.xml"})
 @RunWith(SpringJUnit4ClassRunner.class)

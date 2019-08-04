@@ -4,13 +4,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="autowiredBeanByName" class="spring.beans.autowire.AutowiredBean" autowire="byName"/>
+    <bean id="autowiredBeanByName" class="spring.xmlannotationconfig.beans.autowire.AutowiredBean" autowire="byName"/>
 
-    <bean id="autowireBeanByType" class="spring.beans.autowire.AutowiredBean" autowire="byType"/>
+    <bean id="autowireBeanByType" class="spring.xmlannotationconfig.beans.autowire.AutowiredBean" autowire="byType"/>
 
-    <bean id="autowireBeanByConstructor" class="spring.beans.autowire.AutowiredBean" autowire="constructor"/>
+    <bean id="autowireBeanByConstructor" class="spring.xmlannotationconfig.beans.autowire.AutowiredBean" autowire="constructor"/>
 
-    <bean id="dependencyBean" class="spring.beans.autowire.DependencyBean">
+    <bean id="dependencyBean" class="spring.xmlannotationconfig.beans.autowire.DependencyBean">
         <property name="name" ref="name"/>
     </bean>
 

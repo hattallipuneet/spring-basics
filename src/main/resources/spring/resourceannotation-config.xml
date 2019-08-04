@@ -9,10 +9,10 @@
 
     <context:annotation-config/>
 
-    <bean id="movieFinder" class="spring.resourceannotation.MovieFinder" />
+    <bean id="movieFinder" class="spring.xmlannotationconfig.resourceannotation.MovieFinder" />
 
-    <bean id="customerPreferenceDao" class="spring.resourceannotation.CustomerPreferenceDao" />
+    <bean id="customerPreferenceDao" class="spring.xmlannotationconfig.resourceannotation.CustomerPreferenceDao" />
 
-    <bean id="movieRecommender" class="spring.resourceannotation.MovieRecommender" />
+    <bean id="movieRecommender" class="spring.xmlannotationconfig.resourceannotation.MovieRecommender" />
 
 </beans>

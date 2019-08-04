@@ -5,10 +5,10 @@
 		http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="locations" value="classpath:properties/bean-property.properties" />
+        <property name="locations" value="classpath:properties/app-config.properties" />
     </bean>
 
-    <bean id="appConfig" class="spring.beanfactorypostprocessor.AppConfig" >
+    <bean id="appConfig" class="spring.xmlannotationconfig.beanfactorypostprocessor.AppConfig" >
         <property name="url" value="${url}" />
         <property name="port" value="${port}" />
         <property name="appurl" value="${appurl}" />

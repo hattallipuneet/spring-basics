@@ -4,9 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="spring.beanpostprocessor.BeanValidationBeanPostProcessor"/>
+    <bean class="spring.xmlannotationconfig.beanpostprocessor.BeanValidationBeanPostProcessor"/>
 
-    <bean id="beanNeedsValidation" class="spring.beanpostprocessor.BeanNeedsValidation">
+    <bean id="beanNeedsValidation" class="spring.xmlannotationconfig.beanpostprocessor.BeanNeedsValidation">
         <constructor-arg value="true" />
     </bean>
 

@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="lazyinit" class="spring.beans.lazyinit.ExpensiveToCreateBean" lazy-init="true"/>
+    <bean id="lazyinit" class="spring.xmlannotationconfig.beans.lazyinit.ExpensiveToCreateBean" lazy-init="true"/>
 
-    <bean id="notlazy" class="spring.beans.lazyinit.AnotherBean"/>
+    <bean id="notlazy" class="spring.xmlannotationconfig.beans.lazyinit.AnotherBean"/>
 
 </beans>

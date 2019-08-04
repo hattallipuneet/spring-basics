@@ -5,12 +5,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import spring.basics.beans.ComplexBean;
-import spring.basics.beans.ComplexBean2;
-import spring.basics.beans.ScalarValueBean;
+import spring.xmlannotationconfig.basics.beans.ComplexBean;
+import spring.xmlannotationconfig.basics.beans.ComplexBean2;
+import spring.xmlannotationconfig.basics.beans.ScalarValueBean;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:spring/application-context.xml"})

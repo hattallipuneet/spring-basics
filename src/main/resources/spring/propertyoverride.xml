@@ -8,7 +8,7 @@
         <property name="locations" value="classpath:properties/bean-property.properties" />
     </bean>
 
-    <bean id="appConfig" class="spring.beanfactorypostprocessor.AppConfig" >
+    <bean id="appConfig" class="spring.xmlannotationconfig.beanfactorypostprocessor.AppConfig" >
         <property name="url" value="https://localhost" />
         <property name="port" value="" />
         <property name="appurl" value="" />

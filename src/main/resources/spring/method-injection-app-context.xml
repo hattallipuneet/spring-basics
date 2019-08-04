@@ -4,13 +4,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="commandManager" class="spring.beans.methodinjection.SpringAwareCommandManager"/>
+    <bean id="commandManager" class="spring.xmlannotationconfig.beans.methodinjection.SpringAwareCommandManager"/>
 
-    <bean id="simpleCommand" class="spring.beans.methodinjection.Command" scope="prototype">
+    <bean id="simpleCommand" class="spring.xmlannotationconfig.beans.methodinjection.Command" scope="prototype">
         <property name="command" value="sh testcommand.sh"/>
     </bean>
 
-    <bean id="miCommandManager" class="spring.beans.methodinjection.MethodInjectedCommandManager">
+    <bean id="miCommandManager" class="spring.xmlannotationconfig.beans.methodinjection.MethodInjectedCommandManager">
         <lookup-method name="createCommand" bean="simpleCommand" />
     </bean>
 

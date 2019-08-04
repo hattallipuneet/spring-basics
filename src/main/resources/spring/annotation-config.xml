@@ -9,10 +9,10 @@
 
     <context:annotation-config/>
 
-    <bean id="simpleMovieService" class="spring.annotationconfig.SimpleMovieService"/>
+    <bean id="simpleMovieService" class="spring.xmlannotationconfig.annotationconfig.SimpleMovieService"/>
 
-    <bean id="movieFinder" class="spring.annotationconfig.MovieFinder"/>
+    <bean id="movieFinder" class="spring.xmlannotationconfig.annotationconfig.MovieFinder"/>
 
-    <bean id="movieDao" class="spring.annotationconfig.MovieDao"/>
+    <bean id="movieDao" class="spring.xmlannotationconfig.annotationconfig.MovieDao"/>
 
 </beans>

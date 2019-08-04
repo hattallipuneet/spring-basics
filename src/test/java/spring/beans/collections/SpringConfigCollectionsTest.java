@@ -7,10 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import spring.beans.collections.ListCollectionHolder;
-import spring.beans.collections.MapCollectionHolder;
-import spring.beans.collections.PropertiesCollectionHolder;
-import spring.beans.collections.SetCollectionHolder;
+import spring.xmlannotationconfig.beans.collections.ListCollectionHolder;
+import spring.xmlannotationconfig.beans.collections.MapCollectionHolder;
+import spring.xmlannotationconfig.beans.collections.PropertiesCollectionHolder;
+import spring.xmlannotationconfig.beans.collections.SetCollectionHolder;
 
 import java.util.Arrays;
 import java.util.Properties;

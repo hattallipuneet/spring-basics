@@ -7,7 +7,7 @@
     <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
         <property name="propertyEditorRegistrars">
             <list>
-                <bean class="spring.propertyeditors.CustomPropertyEditorRegistrar"/>
+                <bean class="spring.xmlannotationconfig.propertyeditors.CustomPropertyEditorRegistrar"/>
             </list>
         </property>
     </bean>
@@ -15,19 +15,19 @@
     <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
         <property name="customEditors">
             <map>
-                <entry key="spring.propertyeditors.ExoticType"
-                       value="spring.propertyeditors.ExoticTypeEditor"/>
+                <entry key="spring.xmlannotationconfig.propertyeditors.ExoticType"
+                       value="spring.xmlannotationconfig.propertyeditors.ExoticTypeEditor"/>
             </map>
         </property>
     </bean>
 
-    <bean id="idealStudent" class="spring.propertyeditors.StudentBean">
+    <bean id="idealStudent" class="spring.xmlannotationconfig.propertyeditors.StudentBean">
         <property name="firstName" value="Alex"/>
         <property name="lastName" value="Morgan"/>
         <property name="dob" value="1991-05-18"/>
     </bean>
 
-    <bean id="ebonyExotic" class="spring.propertyeditors.DependsOnExoticType">
+    <bean id="ebonyExotic" class="spring.xmlannotationconfig.propertyeditors.DependsOnExoticType">
         <property name="exoticType" value="Ebony"/>
     </bean>
 

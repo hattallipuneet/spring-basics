@@ -4,11 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="httpService" class="spring.beans.servicelocator.HttpService" />
+    <bean id="httpService" class="spring.xmlannotationconfig.beans.servicelocator.HttpService" />
 
     <bean class="org.springframework.beans.factory.config.ServiceLocatorFactoryBean" id="serviceLocatorResource">
-        <property name="serviceLocatorInterface" value="spring.beans.servicelocator.ServiceFactory"/>
+        <property name="serviceLocatorInterface" value="spring.xmlannotationconfig.beans.servicelocator.ServiceFactory"/>
     </bean>
 
-    <bean id="userResource" class="spring.beans.servicelocator.UserResource" />
+    <bean id="userResource" class="spring.xmlannotationconfig.beans.servicelocator.UserResource" />
 </beans>

@@ -11,23 +11,23 @@
         <property name="applicationAdminEnabled" value="false" />
     </bean>
 
-    <bean id="springBootAttr" class="spring.beans.beaninheritance.SpringBootAttr" parent="defaultSpringBootAttr">
+    <bean id="springBootAttr" class="spring.xmlannotationconfig.beans.beaninheritance.SpringBootAttr" parent="defaultSpringBootAttr">
         <property name="loggingFile" value="/path/to/file/location" />
     </bean>
 
-    <bean id="environmentAttr" class="spring.beans.beaninheritance.EnvironmentAttr">
+    <bean id="environmentAttr" class="spring.xmlannotationconfig.beans.beaninheritance.EnvironmentAttr">
         <property name="url" value="example.com"/>
         <property name="port" value="8082" />
     </bean>
 
-    <bean id="devEnvironmentAttr" class="spring.beans.beaninheritance.DevEnvironmentAttr" parent="environmentAttr">
+    <bean id="devEnvironmentAttr" class="spring.xmlannotationconfig.beans.beaninheritance.DevEnvironmentAttr" parent="environmentAttr">
         <property name="appMode" value="DEV" />
         <property name="protocol" value="https" />
         <property name="username" value="DEV_USER" />
         <property name="password" value="AEdsQGcvF4" />
     </bean>
 
-    <bean id="prodEnvironment" class="spring.beans.beaninheritance.ProdEnvironmentAttr" parent="environmentAttr">
+    <bean id="prodEnvironment" class="spring.xmlannotationconfig.beans.beaninheritance.ProdEnvironmentAttr" parent="environmentAttr">
         <property name="appMode" value="PROD" />
         <property name="protocol" value="https" />
         <property name="username" value="PROD_USER" />
